@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🌿 Mural de Plantas</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header class="topo">
+
+        <h1>🌿 Mural de Plantas</h1>
+
+        <p>
+            Conheça diferentes plantas e descubra como cuidar delas.
+        </p>
+
+        <!-- PESQUISA -->
+
+        <div class="pesquisa">
+
+            🔍
+
+            <input
+                type="text"
+                id="busca"
+                placeholder="Pesquisar planta..."
+            >
+
+        </div>
+
+    </header>
+
+
+    <!-- CATEGORIAS -->
+
+    <nav class="categorias">
+
+        <button
+            class="ativo"
+            data-filtro="todas"
+        >
+            Todas
+        </button>
+
+        <button data-filtro="interior">
+            🏠 Interior
+        </button>
+
+        <button data-filtro="exterior">
+            ☀️ Exterior
+        </button>
+
+        <button data-filtro="suculenta">
+            🌵 Suculentas
+        </button>
+
+    </nav>
+
+
+    <!-- MURAL -->
+
+    <main class="mural" id="mural">
+
+
+        <!-- JIBOIA -->
+
+        <article
+            class="card"
+            data-categoria="interior"
+            data-nome="jiboia"
+        >
+
+            <div class="imagem-container">
+
+                <img
+                    src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=800&q=80"
+                    alt="Jiboia"
+                >
+
+                <span class="tag">
+                    Interior
+                </span>
+
+            </div>
+
+
+            <div class="conteudo">
+
+                <h2>🌿 Jiboia</h2>
+
+                <p class="descricao">
+                    Uma planta resistente e perfeita para
+                    ambientes internos.
+                </p>
+
+
+                <div class="informacoes">
+
+                    <div>
+                        <span>☀️</span>
+                        <strong>Luz</strong>
+                        <small>Indireta</small>
+                    </div>
+
+                    <div>
+                        <span>💧</span>
+                        <strong>Rega</strong>
+                        <small>2x semana</small>
+                    </div>
+
+                    <div>
+                        <span>🌡️</span>
+                        <strong>Clima</strong>
+                        <small>18–30°C</small>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="detalhes"
+                    onclick="abrirModal('jiboia')"
+                >
+                    Ver detalhes →
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ALOE VERA -->
+
+        <article
+            class="card"
+            data-categoria="suculenta"
+            data-nome="aloe vera"
+        >
+
+            <div class="imagem-container">
+
+                <img src="imagens/aloe-vera.png"
+                    alt="Aloe Vera"
+                >
+
+                <span class="tag">
+                    Suculenta
+                </span>
+
+            </div>
+
+
+            <div class="conteudo">
+
+                <h2>🌵 Aloe Vera</h2>
+
+                <p class="descricao">
+                    Também conhecida como babosa, é uma
+                    planta que armazena água.
+                </p>
+
+
+                <div class="informacoes">
+
+                    <div>
+                        <span>☀️</span>
+                        <strong>Luz</strong>
+                        <small>Alta</small>
+                    </div>
+
+                    <div>
+                        <span>💧</span>
+                        <strong>Rega</strong>
+                        <small>1x semana</small>
+                    </div>
+
+                    <div>
+                        <span>🌡️</span>
+                        <strong>Clima</strong>
+                        <small>15–30°C</small>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="detalhes"
+                    onclick="abrirModal('aloe')"
+                >
+                    Ver detalhes →
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- GIRASSOL -->
+
+        <article
+            class="card"
+            data-categoria="exterior"
+            data-nome="girassol"
+        >
+
+            <div class="imagem-container">
+
+                <img
+                    src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=800&q=80"
+                    alt="Girassol"
+                >
+
+                <span class="tag">
+                    Exterior
+                </span>
+
+            </div>
+
+
+            <div class="conteudo">
+
+                <h2>🌻 Girassol</h2>
+
+                <p class="descricao">
+                    Uma flor conhecida por sua cor vibrante
+                    e por gostar bastante de sol.
+                </p>
+
+
+                <div class="informacoes">
+
+                    <div>
+                        <span>☀️</span>
+                        <strong>Luz</strong>
+                        <small>Sol direto</small>
+                    </div>
+
+                    <div>
+                        <span>💧</span>
+                        <strong>Rega</strong>
+                        <small>Regular</small>
+                    </div>
+
+                    <div>
+                        <span>🌡️</span>
+                        <strong>Clima</strong>
+                        <small>20–30°C</small>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="detalhes"
+                    onclick="abrirModal('girassol')"
+                >
+                    Ver detalhes →
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- COSTELA DE ADÃO -->
+
+        <article
+            class="card"
+            data-categoria="interior"
+            data-nome="costela de adao"
+        >
+
+            <div class="imagem-container">
+
+                <img src="imagens/costela-de-adao.jpg"
+                    alt="Costela de Adão"
+                >
+
+                <span class="tag">
+                    Interior
+                </span>
+
+            </div>
+
+
+            <div class="conteudo">
+
+                <h2>🌿 Costela-de-Adão</h2>
+
+                <p class="descricao">
+                    Uma planta tropical com folhas grandes
+                    e muito bonitas.
+                </p>
+
+
+                <div class="informacoes">
+
+                    <div>
+                        <span>☀️</span>
+                        <strong>Luz</strong>
+                        <small>Indireta</small>
+                    </div>
+
+                    <div>
+                        <span>💧</span>
+                        <strong>Rega</strong>
+                        <small>2x semana</small>
+                    </div>
+
+                    <div>
+                        <span>🌡️</span>
+                        <strong>Clima</strong>
+                        <small>18–28°C</small>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="detalhes"
+                    onclick="abrirModal('costela')"
+                >
+                    Ver detalhes →
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- SUCULENTA -->
+
+        <article
+            class="card"
+            data-categoria="suculenta"
+            data-nome="suculenta"
+        >
+
+            <div class="imagem-container">
+
+                <img src="imagens/suculenta.jpg"
+                    alt="Suculenta"
+                >
+
+                <span class="tag">
+                    Suculenta
+                </span>
+
+            </div>
+
+
+            <div class="conteudo">
+
+                <h2>🌵 Suculenta</h2>
+
+                <p class="descricao">
+                    Uma planta pequena, resistente e ótima
+                    para iniciantes.
+                </p>
+
+
+                <div class="informacoes">
+
+                    <div>
+                        <span>☀️</span>
+                        <strong>Luz</strong>
+                        <small>Alta</small>
+                    </div>
+
+                    <div>
+                        <span>💧</span>
+                        <strong>Rega</strong>
+                        <small>Pouca</small>
+                    </div>
+
+                    <div>
+                        <span>🌡️</span>
+                        <strong>Clima</strong>
+                        <small>15–30°C</small>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="detalhes"
+                    onclick="abrirModal('suculenta')"
+                >
+                    Ver detalhes →
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- LAVANDA -->
+
+        <article
+            class="card"
+            data-categoria="exterior"
+            data-nome="lavanda"
+        >
+
+            <div class="imagem-container">
+
+                <img
+                    src="https://images.unsplash.com/photo-1499002238440-d264edd596ec?auto=format&fit=crop&w=800&q=80"
+                    alt="Lavanda"
+                >
+
+                <span class="tag">
+                    Exterior
+                </span>
+
+            </div>
+
+
+            <div class="conteudo">
+
+                <h2>💜 Lavanda</h2>
+
+                <p class="descricao">
+                    Uma planta aromática conhecida por suas
+                    flores roxas e perfume agradável.
+                </p>
+
+
+                <div class="informacoes">
+
+                    <div>
+                        <span>☀️</span>
+                        <strong>Luz</strong>
+                        <small>Sol direto</small>
+                    </div>
+
+                    <div>
+                        <span>💧</span>
+                        <strong>Rega</strong>
+                        <small>Moderada</small>
+                    </div>
+
+                    <div>
+                        <span>🌡️</span>
+                        <strong>Clima</strong>
+                        <small>15–28°C</small>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="detalhes"
+                    onclick="abrirModal('lavanda')"
+                >
+                    Ver detalhes →
+                </button>
+
+            </div>
+
+        </article>
+
+    </main>
+
+
+
+    <!-- MODAL -->
+
+    <div
+        class="modal"
+        id="modal"
+    >
+
+        <div class="modal-box">
+
+            <button
+                class="fechar"
+                onclick="fecharModal()"
+            >
+                ×
+            </button>
+
+            <h2 id="modalTitulo"></h2>
+
+            <div id="modalConteudo"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
